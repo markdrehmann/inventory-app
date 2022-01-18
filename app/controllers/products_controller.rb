@@ -12,7 +12,13 @@ class ProductsController < ApplicationController
   end
 
   def create
-
+    @product = Product.new(product_params)
+    if @product.save
+      flash[:alert] = "Product Created!"
+      redirect_to product_path(@product)
+    else
+      render :new
+    end
   end
 
   def Edit
@@ -20,7 +26,9 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to products_path
   end
 
   private
