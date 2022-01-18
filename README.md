@@ -1,24 +1,32 @@
-# README
+# Inventory App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to my Inventory App! This app was created for an intern challenge. It is a basic Rails project to fulfill the challenge requirements.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone this repository, navigate into its folder `/inventory-app` and execute:
 
-* System dependencies
+    bundle install
 
-* Configuration
+Then, to create the database execute:
 
-* Database creation
+    rails db:migrate
 
-* Database initialization
+To start the server, execute:
 
-* How to run the test suite
+    rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+Navigate to localhost:3000 in your browser to preview the app.
 
-* Deployment instructions
 
-* ...
+## Usage
+
+Usage of this Rails basic CRUD app is for the purpose of entertainment and skill evaluation.
+
+### License
+
+The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+### Code of Conduct
+
+Everyone interacting in the Inventory App on Rails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
