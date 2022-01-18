@@ -1,3 +1,28 @@
 <p><%= link_to "All Products", products_path %></p>
 
-<h2>Edit Product</h2>
+<h2>Edit <%= @product.name %></h2>
+
+<div class="form">
+  <%= form_for @product do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <% if @product.errors[:name] %> 
+      <%= @product.errors[:name].to_sentence %>
+    <% end %>
+    <br><br>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <% if @product.errors[:description] %>
+      <%= @product.errors[:description].to_sentence %>
+    <% end %>
+    <br><br>
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+    <% if @product.errors[:quantity] %>
+      <%= @product.errors[:quantity].to_sentence %>
+    <% end %>
+    <br><br>
+    
+    <%= f.submit %>
+  <% end %>
+</div>
