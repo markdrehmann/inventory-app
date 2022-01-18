@@ -2,6 +2,15 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
   end
+  
+  def export
+    @products = Product.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @products.to_csv, filename: "products-#{Date.today}.csv" }
+    end
+  end
 
   def show
     @product = Product.find(params[:id])
